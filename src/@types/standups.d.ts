@@ -16,6 +16,7 @@ interface StandupItem {
 
 interface stanupItemProps{
   standup: StandupItem
+  key: number
 }
 
 interface ResGetStandupsApi extends Res {
