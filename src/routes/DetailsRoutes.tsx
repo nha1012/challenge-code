@@ -8,7 +8,6 @@ export default function DetailsRoutes() {
   return (
     <Switch>
       <Route
-      exact
         path={PATH.STANDUP_DETAILS}
         component={() => (
           <Suspense fallback={<Loading />}>

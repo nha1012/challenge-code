@@ -13,7 +13,7 @@ const ListStandup = () => {
         {
           standups.standups.map((standup, key)=>{
             return (
-              <StandupItem standup={standup}></StandupItem>
+              <StandupItem standup={standup} key={key}></StandupItem>
             )
           })
         }
