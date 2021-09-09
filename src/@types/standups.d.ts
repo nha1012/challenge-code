@@ -13,9 +13,14 @@ interface StandupItem {
   time: string
 }
 
+
+interface stanupItemProps{
+  standup: StandupItem
+}
+
 interface ResGetStandupsApi extends Res {
   data: {
-    products: Product[]
+    standups: Standups[]
   }
 }
 

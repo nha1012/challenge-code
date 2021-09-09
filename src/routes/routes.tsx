@@ -1,13 +1,15 @@
 import React from "react"
-import { BrowserRouter } from "react-router-dom"
-import StandupRoutes from "./StandupRoutes"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import DetailsRoutes from "./DetailsRoutes"
 import HomeRoutes from "./HomeRoutes"
 
 export default function Routes() {
   return (
-    <BrowserRouter>
-      <HomeRoutes />
-      <StandupRoutes />
-    </BrowserRouter>
+    <Router>
+      <Switch>
+        <HomeRoutes/>
+        <DetailsRoutes/>
+      </Switch>
+    </Router>
   )
 }

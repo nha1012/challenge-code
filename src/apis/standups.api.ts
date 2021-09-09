@@ -1,7 +1,8 @@
 import axios from "axios"
+import { API_URL } from "src/constants/api"
 
-export const getProductListApi = (): Promise<ResGetStandupsApi> =>{
-  return axios.get('/')
+export const getStandupsListApi = ()  =>{
+  return axios.get(`${API_URL}/standups`)
 }
 
 // export const getProductItemApi = (id: string): Promise<ResGetStandupsApi> =>
