@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import StateButton from 'src/components/StateButton/StateButton'
 import { PATH } from 'src/constants/paths'
 import { renderSchedule } from 'src/helpers/string'
-import styled from 'styled-components'
+import { LeftContainer, Container, Wrapper, RightContainer } from './StanupItem.style'
 
 const StandupItem = (props: stanupItemProps) => {
   const [standup, setStandup] = useState(props.standup)
   return (
     <Container>
-      <Link to={PATH.STANDUP_DETAILS}>
+      <Link to={`${PATH.STANDUP_DETAILS}/${standup.id}`}>
       <h3>{standup.name}</h3>
       <Wrapper>
         <LeftContainer>
@@ -37,28 +37,4 @@ const StandupItem = (props: stanupItemProps) => {
 }
 
 
-const Container = styled.div`
-  border: 1px solid;
-  padding: 20px;
-  a{
-    text-decoration: none;
-    color: black;
-  }
-  ul{
-    list-style: none;
-  }
-`
-
-const LeftContainer = styled.div`
-  ul li{
-    font-weight: bold;
-  }
-`
-const RightContainer = styled.div`
-
-`
-const Wrapper = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
-`
 export default StandupItem
