@@ -8,7 +8,7 @@ export default function DetailsRoutes() {
   return (
     <Switch>
       <Route
-        path={PATH.STANDUP_DETAILS}
+        path={`${PATH.STANDUP_DETAILS}/:id`}
         component={() => (
           <Suspense fallback={<Loading />}>
             <Details />

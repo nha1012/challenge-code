@@ -4,13 +4,15 @@ interface Standups {
 }
 
 interface StandupItem {
-  id: number,
+  id: string,
   name: string,
   no_users: number,
   state: string,
   createBy: string,
   schedule: [],
-  time: string
+  time: string,
+  users: [string],
+  questions: [string]
 }
 
 
