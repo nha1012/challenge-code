@@ -1,7 +1,7 @@
 import { combineReducers } from "redux"
-import { homeReducer } from "src/pages/Home/Home.reducer"
+import  detailsReducer  from "src/pages/Details/Details.reducer"
 const rootReducer = combineReducers({
-  home: homeReducer
+  details: detailsReducer
 })
 
 export default rootReducer

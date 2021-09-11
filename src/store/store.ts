@@ -1,11 +1,19 @@
-import { createStore, applyMiddleware, compose } from "redux"
-import thunk from "redux-thunk"
-import rootReducer from "src/reducer/reducer"
-const composeEnhancers =
-  typeof window === "object" &&
-  process.env.NODE_ENV === "development" &&
-  (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    ? (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
-    : compose
-const enhancer = composeEnhancers(applyMiddleware(thunk))
-export const store = createStore(rootReducer, enhancer)
+import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { Dispatch } from 'redux';
+import detailsReducer from 'src/pages/Details/Details.reducer';
+
+
+export const store = configureStore({
+  reducer: {
+    details: detailsReducer
+  },
+});
+
+export type AppDispatch = typeof store.dispatch | any;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppThunk<ReturnType = void> = ThunkAction<
+  ReturnType,
+  RootState,
+  unknown,
+  Action<string>
+>;
