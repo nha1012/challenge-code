@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import StateButton from 'src/components/StateButton/StateButton'
 import { PATH } from 'src/constants/paths'
 import { renderSchedule } from 'src/helpers/string'
+import { useAppDispatch } from 'src/hooks/appHook'
+import { fetchStandupDetails } from 'src/pages/Details/Details.reducer'
 import { LeftContainer, Container, Wrapper, RightContainer } from './StanupItem.style'
 
 const StandupItem = (props: stanupItemProps) => {
@@ -27,7 +29,7 @@ const StandupItem = (props: stanupItemProps) => {
             </li>
             <li>{standup.no_users}</li>
             <li>{standup.createBy}</li>
-            <li>{`${standup.time} ${renderSchedule(standup.schedule)}`}</li>
+            <li>{`${standup.time} ${standup?.schedule ? renderSchedule(standup?.schedule): null}`}</li>
           </ul>
         </RightContainer>
       </Wrapper>

@@ -13,4 +13,13 @@ export const Container = styled.div`
   & ul.question-container{
     list-style: none;
   }
+  & .header-details{
+    display: flex;
+    flex-flow: row nowrap;
+    img{
+      margin-top: 4px;
+      margin-right: 17px;
+      cursor: pointer;
+    }
+  }
 `
