@@ -1,5 +1,3 @@
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/nguyennha_1012)
-
 <!-- PROJECT LOGO -->
 <br />
   <h3 align="center">Challenge Code React</h3>
